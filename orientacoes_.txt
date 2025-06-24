@@ -1,0 +1,6 @@
+cadastro == 1
+pesquisa == 2
+atualizaçao == 3
+
+cliente == 1
+funcionario == 2

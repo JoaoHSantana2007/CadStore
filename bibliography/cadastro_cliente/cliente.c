@@ -7,7 +7,7 @@
 #define TAM_DATA 11
 
 void perguntas_padro(){
-    
+
     char nome[TAM_DADOS], email[TAM_DADOS], telefone[TAM_TEL], cpf[TAM_CPF],
         data_de_nascimento[TAM_DATA], cep[TAM_CEP], endereco[TAM_DADOS];
     
@@ -38,5 +38,11 @@ void perguntas_padro(){
     printf("\tEndereco: ");
     fgets(endereco, TAM_DADOS, stdin);
     fflush(stdin);
+
+    FILE *clientes = fopen("\\Users\\jhfcs\\Desktop\\CadStore\\data\\clientes.txt", "a");
+    
+    if(clientes == NULL){
+        printf("\n\tERRO\n\tArquivo noa gerrado\n\n");
+    }
 
 }

@@ -1,0 +1,1 @@
+void perguntas_padro();  

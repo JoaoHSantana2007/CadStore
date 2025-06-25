@@ -2,6 +2,7 @@
 #include <stdlib.h>
 
 #include "C:\Users\jhfcs\Desktop\CadStore\bibliography\cadastro_cliente\cliente.h"
+#include "C:\Users\jhfcs\Desktop\CadStore\bibliography\cadastro_funcionario\funcionario.h"
 
 int main(int argc, char *argv[]) {
     int parametro_01, parametro_02;
@@ -22,7 +23,9 @@ int main(int argc, char *argv[]) {
         return 1;
     }else if(parametro_01 == 1){
         if(parametro_02 == 1){
-            perguntas_padro();
+            cadastro_cliente();  
+        }else if(parametro_02 == 2){
+            cadastro_funcionario();
         }
     }
     

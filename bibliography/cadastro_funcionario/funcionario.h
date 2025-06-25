@@ -1,0 +1,1 @@
+void cadastro_funcionario();

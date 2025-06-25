@@ -1,1 +1,1 @@
-void perguntas_padro();  
+void cadastro_cliente();  

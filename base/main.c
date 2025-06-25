@@ -1,34 +1,49 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+// Inclui os cabeçalhos originais
 #include "C:\Users\jhfcs\Desktop\CadStore\bibliography\cadastro_cliente\cliente.h"
 #include "C:\Users\jhfcs\Desktop\CadStore\bibliography\cadastro_funcionario\funcionario.h"
 
+// Adiciona os cabeçalhos para edição
+#include "C:\Users\jhfcs\Desktop\CadStore\bibliography\cadastro_cliente\edit_cliente.h"
+#include "C:\Users\jhfcs\Desktop\CadStore\bibliography\cadastro_funcionario\edit_funcionario.h"
+
 int main(int argc, char *argv[]) {
-    int parametro_01, parametro_02;
+    int operacao, tipo;
 
     if(argc != 3){
         printf("\n\tERRO\n\tDigite apenas 2 argumentos validos\n\n");
         return 1; 
     }
 
-    parametro_01 = atoi(argv[1]);
-    parametro_02 = atoi(argv[2]);
+    operacao = atoi(argv[1]);
+    tipo = atoi(argv[2]);
 
-    if(parametro_01 != 1 && parametro_01 != 2){
-        printf("\n\tERRO\n\tDigite\n\t1 para cadastro\n\t2 para pesquisa\n\n");
+    // Verificação dos parâmetros
+    if(operacao < 1 || operacao > 3){
+        printf("\n\tERRO\n\tDigite:\n\t1 para cadastro\n\t2 para pesquisa\n\t3 para editar\n\n");
         return 1;
-    }else if(parametro_02 != 1 && parametro_02 != 2){
-        printf("\n\tERRO\n\tDigite\n\t1 para cliente\n\t2 para funcionario\n\n");
+    } else if(tipo != 1 && tipo != 2){
+        printf("\n\tERRO\n\tDigite:\n\t1 para cliente\n\t2 para funcionario\n\n");
         return 1;
-    }else if(parametro_01 == 1){
-        if(parametro_02 == 1){
+    }
+
+    // Executa a operação selecionada
+    if(operacao == 1){ // Cadastro
+        if(tipo == 1){
             cadastro_cliente();  
-        }else if(parametro_02 == 2){
+        } else {
             cadastro_funcionario();
         }
+    } else if(operacao == 3){ // Edição
+        if(tipo == 1){
+            editar_cliente();
+        } else {
+            editar_funcionario();
+        }
     }
-    
+    // Operação 2 (pesquisa) ainda não implementada
 
     return 0;
 }

@@ -8,7 +8,8 @@
 #define TAM_DATA 11
 
 void cadastro_funcionario(){
-    char nome[TAM_DADOS], cargo[TAM_DADOS], matricula[TAM_DADOS], email[TAM_DADOS], telefone[TAM_TEL], cpf[TAM_CPF], data_de_nascimento[TAM_DATA], cep[TAM_CEP], endereco[TAM_DADOS];
+    char nome[TAM_DADOS], cargo[TAM_DADOS], matricula[TAM_DADOS], email[TAM_DADOS], telefone[TAM_TEL], 
+        cpf[TAM_CPF], data_de_nascimento[TAM_DATA], cep[TAM_CEP], endereco[TAM_DADOS];
     char nome_arquivo[150];
 
     printf("\n\tNome: ");
@@ -51,14 +52,10 @@ void cadastro_funcionario(){
     }
 
     fprintf(funcionario,
-        "Nome: %sCargo: %sMatricula / Numero de inscricao: %sEmail: %sTelefone: %sCPF: %s\nData de nascimento: %sCEP: %sEndereco: %s", nome, cargo, matricula, email, telefone, cpf, data_de_nascimento, cep, endereco);
+        "Nome: %sCargo: %sMatricula / Numero de inscricao: %sEmail: %sTelefone: %sCPF: %s\nData de nascimento: %sCEP: %sEndereco: %s", 
+            nome, cargo, matricula, email, telefone, cpf, data_de_nascimento, cep, endereco);
 
     fclose(funcionario);
 
     printf("\n\tFuncionario cadastrado com sucesso em %s\n", nome_arquivo);
-}
-
-int main(){
-    cadastro_funcionario();
-    return 0;
 }

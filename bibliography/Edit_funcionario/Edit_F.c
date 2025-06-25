@@ -76,7 +76,3 @@ void edit_funcionario(){
     fclose(arquivo);
     printf("\n\tCadastro do funcionario atualizado com sucesso!\n");
 }
-int main(){
-    edit_funcionario();
-    return 0;
-}

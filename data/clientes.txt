@@ -1,0 +1,15 @@
+
+
+Nome: a
+
+Email: a
+
+Telefone: a
+
+CPF: a
+
+Data de nascimento: a
+
+CEP: a
+
+Endereco: a

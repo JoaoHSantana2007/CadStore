@@ -8,7 +8,8 @@
 #define TAM_DATA 11
 
 void cadastro_cliente(){
-    char nome[TAM_DADOS], email[TAM_DADOS], telefone[TAM_TEL], cpf[TAM_CPF], data_de_nascimento[TAM_DATA], cep[TAM_CEP], endereco[TAM_DADOS];
+    char nome[TAM_DADOS], email[TAM_DADOS], telefone[TAM_TEL], cpf[TAM_CPF], data_de_nascimento[TAM_DATA], 
+        cep[TAM_CEP], endereco[TAM_DADOS];
     char nome_arquivo[150];
 
     printf("\n\tNome: ");
@@ -44,14 +45,10 @@ void cadastro_cliente(){
         return;
     }
 
-    fprintf(cliente, "Nome: %sEmail: %sTelefone: %sCPF: %s\nData de nascimento: %sCEP: %sEndereco: %s", nome, email, telefone, cpf, data_de_nascimento, cep, endereco);
+    fprintf(cliente, "Nome: %sEmail: %sTelefone: %sCPF: %s\nData de nascimento: %sCEP: %sEndereco: %s", 
+        nome, email, telefone, cpf, data_de_nascimento, cep, endereco);
 
     fclose(cliente);
 
     printf("\n\tCliente cadastrado com sucesso em %s\n", nome_arquivo);
-}
-
-int main(){
-    cadastro_cliente();
-    return 0;
 }

@@ -17,7 +17,8 @@ void edit_cliente(){
     fgets(cpf, TAM_CPF, stdin);
     cpf[strcspn(cpf, "\n")] = 0;
 
-    snprintf(nome_arquivo, sizeof(nome_arquivo), "C:\\Users\\jhfcs\\Desktop\\CadStore\\data\\cliente_%s.txt", cpf);
+    snprintf(nome_arquivo, sizeof(nome_arquivo), 
+        "C:\\Users\\jhfcs\\Desktop\\CadStore\\data\\cliente_%s.txt", cpf);
 
     // Verifica se o arquivo existe
     FILE *arquivo = fopen(nome_arquivo, "r");
@@ -36,7 +37,8 @@ void edit_cliente(){
     fclose(arquivo);
 
     // Solicita novos dados
-    char nome[TAM_DADOS], email[TAM_DADOS], telefone[TAM_TEL], data_de_nascimento[TAM_DATA], cep[TAM_CEP], endereco[TAM_DADOS];
+    char nome[TAM_DADOS], email[TAM_DADOS], telefone[TAM_TEL], data_de_nascimento[TAM_DATA], cep[TAM_CEP], 
+        endereco[TAM_DADOS];
 
     printf("\n\tDigite os novos dados:\n");
     
@@ -65,12 +67,9 @@ void edit_cliente(){
         return;
     }
 
-    fprintf(arquivo, "Nome: %sEmail: %sTelefone: %sCPF: %s\nData de nascimento: %sCEP: %sEndereco: %s", nome, email, telefone, cpf, data_de_nascimento, cep, endereco);
+    fprintf(arquivo, "Nome: %sEmail: %sTelefone: %sCPF: %s\nData de nascimento: %sCEP: %sEndereco: %s", 
+        nome, email, telefone, cpf, data_de_nascimento, cep, endereco);
 
     fclose(arquivo);
     printf("\n\tCadastro atualizado com sucesso!\n");
-}
-int main() {
-    edit_cliente();
-    return 0;
 }

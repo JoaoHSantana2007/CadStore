@@ -14,41 +14,51 @@ void cadastro_cliente(){
 
     printf("\n\tNome: ");
     fgets(nome, TAM_DADOS, stdin);
+    fflush(stdin);
 
     printf("\tEmail: ");
     fgets(email, TAM_DADOS, stdin);
+    fflush(stdin);
 
     printf("\tTelefone: ");
     fgets(telefone, TAM_TEL, stdin);
+    fflush(stdin);
 
-    printf("\tCPF (apenas números): ");
+    printf("\tCPF (apenas numeros): ");
     fgets(cpf, TAM_CPF, stdin);
+    fflush(stdin);
 
     printf("\tData de nascimento: ");
     fgets(data_de_nascimento, TAM_DATA, stdin);
+    fflush(stdin);
 
     printf("\tCEP: ");
     fgets(cep, TAM_CEP, stdin);
+    fflush(stdin);
 
     printf("\tEndereco: ");
     fgets(endereco, TAM_DADOS, stdin);
+    fflush(stdin);
 
-    // Remove o \n do CPF para montar o nome do arquivo corretamente
     cpf[strcspn(cpf, "\n")] = 0;
 
-    // Monta o nome do arquivo, ex: cliente_12345678901.txt
-    snprintf(nome_arquivo, sizeof(nome_arquivo), "cliente_%s.txt", cpf);
+    snprintf(nome_arquivo, sizeof(nome_arquivo), "C:\\CadStore\\data\\clientes\\cliente_%s.txt", cpf);
 
     FILE *cliente = fopen(nome_arquivo, "w");
     if(cliente == NULL){
-        printf("\n\tERRO\n\tArquivo não gerado\n\n");
+        printf("\n\tERRO\n\tArquivo nao gerado\n\n");
         return;
     }
 
-    fprintf(cliente, "Nome: %sEmail: %sTelefone: %sCPF: %s\nData de nascimento: %sCEP: %sEndereco: %s", 
-        nome, email, telefone, cpf, data_de_nascimento, cep, endereco);
+    fprintf(cliente, "Nome: %s\n", nome);
+    fprintf(cliente, "Email: %s\n", email);
+    fprintf(cliente, "Telefone: %s\n", telefone);
+    fprintf(cliente, "CPF: %s\n", cpf);
+    fprintf(cliente, "Data de nascimento: %s\n", data_de_nascimento);
+    fprintf(cliente, "CEP: %s\n", cep);
+    fprintf(cliente, "Endereco: %s\n", endereco);
 
     fclose(cliente);
 
-    printf("\n\tCliente cadastrado com sucesso em %s\n", nome_arquivo);
+    printf("\n\tCliente cadastrado com sucesso em %s\n\n", nome_arquivo);
 }

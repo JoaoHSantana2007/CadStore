@@ -14,48 +14,61 @@ void cadastro_funcionario(){
 
     printf("\n\tNome: ");
     fgets(nome, TAM_DADOS, stdin);
+    fflush(stdin);
 
-    printf("\n\tCargo: ");
+    printf("\tCargo: ");
     fgets(cargo, TAM_DADOS, stdin);
+    fflush(stdin);
 
-    printf("\n\tMatricula / Numero de inscricao: ");
+    printf("\tMatricula / Numero de inscricao: ");
     fgets(matricula, TAM_DADOS, stdin);
+    fflush(stdin);
 
     printf("\tEmail: ");
     fgets(email, TAM_DADOS, stdin);
+    fflush(stdin);
 
     printf("\tTelefone: ");
     fgets(telefone, TAM_TEL, stdin);
+    fflush(stdin);
 
-    printf("\tCPF (apenas números): ");
+    printf("\tCPF (apenas numeros): ");
     fgets(cpf, TAM_CPF, stdin);
+    fflush(stdin);
 
     printf("\tData de nascimento: ");
     fgets(data_de_nascimento, TAM_DATA, stdin);
+    fflush(stdin);
 
     printf("\tCEP: ");
     fgets(cep, TAM_CEP, stdin);
+    fflush(stdin);
 
     printf("\tEndereco: ");
     fgets(endereco, TAM_DADOS, stdin);
+    fflush(stdin);
 
-    // Remove o \n do CPF para montar o nome do arquivo corretamente
     cpf[strcspn(cpf, "\n")] = 0;
 
-    // Monta o nome do arquivo, ex: funcionario_12345678901.txt
-    snprintf(nome_arquivo, sizeof(nome_arquivo), "funcionario_%s.txt", cpf);
+    snprintf(nome_arquivo, sizeof(nome_arquivo), "C:\\CadStore\\data\\funcionarios\\funcionario_%s.txt", cpf);
 
     FILE *funcionario = fopen(nome_arquivo, "w");
     if (funcionario == NULL){
-        printf("\n\tERRO\n\tArquivo não gerado\n\n");
+        printf("\n\tERRO\n\tArquivo nao gerado\n\n");
         return;
     }
 
-    fprintf(funcionario,
-        "Nome: %sCargo: %sMatricula / Numero de inscricao: %sEmail: %sTelefone: %sCPF: %s\nData de nascimento: %sCEP: %sEndereco: %s", 
-            nome, cargo, matricula, email, telefone, cpf, data_de_nascimento, cep, endereco);
+    fprintf(funcionario, "Nome: %s\n", nome);
+    fprintf(funcionario, "Cargo: %s\n", cargo);
+    fprintf(funcionario, "Matricula / Numero de inscricao: %s\n", matricula);
+    fprintf(funcionario, "Email: %s\n", email);
+    fprintf(funcionario, "Telefone: %s\n", telefone);
+    fprintf(funcionario, "CPF: %s\n", cpf);
+    fprintf(funcionario, "Data de nascimento: %s\n", data_de_nascimento);
+    fprintf(funcionario, "CEP: %s\n", cep);
+    fprintf(funcionario, "Endereco: %s\n", endereco);
 
     fclose(funcionario);
 
-    printf("\n\tFuncionario cadastrado com sucesso em %s\n", nome_arquivo);
+    printf("\n\tFuncionario cadastrado com sucesso em %s\n\n", nome_arquivo);
 }

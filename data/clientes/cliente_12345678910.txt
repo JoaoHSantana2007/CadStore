@@ -1,0 +1,7 @@
+Nome: Jose Da silva
+Email: jose.s@gmail.com
+Telefone: (61) 99999-9999
+CPF: 12345678910
+Data de nascimento: 01/01/2001
+CEP: 12345678
+Endereco: Brasilia

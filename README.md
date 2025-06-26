@@ -44,7 +44,11 @@ cd ..
 ```
 git clone https://github.com/JoaoHSantana2007/CadStore.git
 ```
-3. Compile o projeto com:
+5. Use este comando para acessar o diretorio 
+```
+cd .\CadStore\base\
+```
+4. Compile o projeto com:
 
 ```
 gcc .\main.c C:\CadStore\bibliography\cadastro_cliente\cliente.c C:\CadStore\bibliography\cadastro_funcionario\funcionario.c C:\CadStore\bibliography\Edit_cliente\Edit_C.c C:\CadStore\bibliography\Edit_funcionario\Edit_F.c C:\CadStore\bibliography\pesquisa_cliente\pesquisa_C.c C:\CadStore\bibliography\pesquisa_funcionario\pesquisa_F.c -o cadstore

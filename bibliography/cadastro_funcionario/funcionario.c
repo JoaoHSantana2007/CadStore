@@ -58,15 +58,15 @@ void cadastro_funcionario(){
         return;
     }
 
-    fprintf(funcionario, "Nome: %s\n", nome);
-    fprintf(funcionario, "Cargo: %s\n", cargo);
-    fprintf(funcionario, "Matricula / Numero de inscricao: %s\n", matricula);
-    fprintf(funcionario, "Email: %s\n", email);
-    fprintf(funcionario, "Telefone: %s\n", telefone);
+    fprintf(funcionario, "Nome: %s", nome);
+    fprintf(funcionario, "Cargo: %s", cargo);
+    fprintf(funcionario, "Matricula / Numero de inscricao: %s", matricula);
+    fprintf(funcionario, "Email: %s", email);
+    fprintf(funcionario, "Telefone: %s", telefone);
     fprintf(funcionario, "CPF: %s\n", cpf);
-    fprintf(funcionario, "Data de nascimento: %s\n", data_de_nascimento);
-    fprintf(funcionario, "CEP: %s\n", cep);
-    fprintf(funcionario, "Endereco: %s\n", endereco);
+    fprintf(funcionario, "Data de nascimento: %s", data_de_nascimento);
+    fprintf(funcionario, "CEP: %s", cep);
+    fprintf(funcionario, "Endereco: %s", endereco);
 
     fclose(funcionario);
 

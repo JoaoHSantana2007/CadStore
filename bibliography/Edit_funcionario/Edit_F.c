@@ -75,15 +75,15 @@ void edit_funcionario(){
         return;
     }
 
-    fprintf(arquivo, "Nome: %s\n", nome);
-    fprintf(arquivo, "Cargo: %s\n", cargo);
-    fprintf(arquivo, "Matricula / Numero de inscricao: %s\n", matricula);
-    fprintf(arquivo, "Email: %s\n", email);
-    fprintf(arquivo, "Telefone: %s\n", telefone);
+    fprintf(arquivo, "Nome: %s", nome);
+    fprintf(arquivo, "Cargo: %s", cargo);
+    fprintf(arquivo, "Matricula / Numero de inscricao: %s", matricula);
+    fprintf(arquivo, "Email: %s", email);
+    fprintf(arquivo, "Telefone: %s", telefone);
     fprintf(arquivo, "CPF: %s\n", cpf);
-    fprintf(arquivo, "Data de nascimento: %s\n", data_de_nascimento);
-    fprintf(arquivo, "CEP: %s\n", cep);
-    fprintf(arquivo, "Endereco: %s\n", endereco);
+    fprintf(arquivo, "Data de nascimento: %s", data_de_nascimento);
+    fprintf(arquivo, "CEP: %s", cep);
+    fprintf(arquivo, "Endereco: %s", endereco);
 
     fclose(arquivo);
     printf("\n\tCadastro do funcionario atualizado com sucesso!\n\n");

@@ -18,7 +18,7 @@ void pesquisa_funcionario(){
     if(arquivo == NULL){
         printf("\n\tFuncionario com CPF %s nao encontrado.\n\n", cpf);
         return;
-    }
+    } 
 
     printf("\n\tDados do funcionario:\n");
     while(fgets(buffer, sizeof(buffer), arquivo) != NULL){

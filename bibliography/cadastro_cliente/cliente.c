@@ -50,13 +50,13 @@ void cadastro_cliente(){
         return;
     }
 
-    fprintf(cliente, "Nome: %s\n", nome);
-    fprintf(cliente, "Email: %s\n", email);
-    fprintf(cliente, "Telefone: %s\n", telefone);
+    fprintf(cliente, "Nome: %s", nome);
+    fprintf(cliente, "Email: %s", email);
+    fprintf(cliente, "Telefone: %s", telefone);
     fprintf(cliente, "CPF: %s\n", cpf);
-    fprintf(cliente, "Data de nascimento: %s\n", data_de_nascimento);
-    fprintf(cliente, "CEP: %s\n", cep);
-    fprintf(cliente, "Endereco: %s\n", endereco);
+    fprintf(cliente, "Data de nascimento: %s", data_de_nascimento);
+    fprintf(cliente, "CEP: %s", cep);
+    fprintf(cliente, "Endereco: %s", endereco);
 
     fclose(cliente);
 

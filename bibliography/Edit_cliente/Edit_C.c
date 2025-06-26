@@ -69,13 +69,13 @@ void edit_cliente(){
         return;
     }
 
-    fprintf(arquivo, "Nome: %s\n", nome);
-    fprintf(arquivo, "Email: %s\n", email);
-    fprintf(arquivo, "Telefone: %s\n", telefone);
+    fprintf(arquivo, "Nome: %s", nome);
+    fprintf(arquivo, "Email: %s", email);
+    fprintf(arquivo, "Telefone: %s", telefone);
     fprintf(arquivo, "CPF: %s\n", cpf);
-    fprintf(arquivo, "Data de nascimento: %s\n", data_de_nascimento);
-    fprintf(arquivo, "CEP: %s\n", cep);
-    fprintf(arquivo, "Endereco: %s\n", endereco);
+    fprintf(arquivo, "Data de nascimento: %s", data_de_nascimento);
+    fprintf(arquivo, "CEP: %s", cep);
+    fprintf(arquivo, "Endereco: %s", endereco);
     fclose(arquivo);
     printf("\n\tCadastro atualizado com sucesso!\n\n");
 }
